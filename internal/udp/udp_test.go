@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/anilmisirlioglu/f1-telemetry-go/pkg/env"
-	"github.com/anilmisirlioglu/f1-telemetry-go/pkg/env/event"
-	"github.com/anilmisirlioglu/f1-telemetry-go/pkg/packets"
+	"github.com/Fuelvine/f1-telemetry/pkg/env"
+	"github.com/Fuelvine/f1-telemetry/pkg/env/event"
+	"github.com/Fuelvine/f1-telemetry/pkg/packets"
 )
 
 type EventTestCase struct {
