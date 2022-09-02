@@ -4,7 +4,7 @@ package packets
 // It details each player’s selected car, any AI involved in the game and also the ready status of each of the participants.
 
 // Frequency: Two every second when in the lobby
-// Size: 1169 bytes
+// Size: 1191 bytes
 // Version: 1
 
 type LobbyInfoData struct {

@@ -3,7 +3,7 @@ package packets
 // This packet gives details of events that happen during the course of a session.
 
 // Frequency: When the event occurs
-// Size: 35 bytes
+// Size: 40 bytes
 // Version: 1
 
 type FastestLap struct {
@@ -38,6 +38,7 @@ type SpeedTrap struct {
 	Speed                   float32 // Top speed achieved in kilometres per hour
 	OverallFastestInSession uint8   // Overall fastest speed in session = 1, otherwise 0
 	DriverFastestInSession  uint8   // Fastest speed for driver in session = 1, otherwise 0
+	FastestSpeedInSession   float32 // Speed of the vehicle that is the fastest in this session
 }
 
 type StartLights struct {

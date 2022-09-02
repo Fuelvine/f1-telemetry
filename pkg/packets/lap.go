@@ -3,7 +3,7 @@ package packets
 // The lap data packet gives details of all the cars in the session.
 
 // Frequency: Rate as specified in menus
-// Size: 1190 bytes
+// Size: 972 bytes
 // Version: 1
 
 type LapData struct {
@@ -17,7 +17,7 @@ type LapData struct {
 	CarPosition                 uint8   // Car race position
 	CurrentLapNum               uint8   // Current lap number
 	PitStatus                   uint8   // 0 = none, 1 = pitting, 2 = in pit area
-	NumPitStops                 uint8   //Number of pit stops taken in this race
+	NumPitStops                 uint8   // Number of pit stops taken in this race
 	Sector                      uint8   // 0 = sector1, 1 = sector2, 2 = sector3
 	CurrentLapInvalid           uint8   // Current lap invalid - 0 = valid, 1 = invalid
 	Penalties                   uint8   // Accumulated time penalties in seconds to be added
@@ -34,8 +34,10 @@ type LapData struct {
 }
 
 type PacketLapData struct {
-	Header  PacketHeader
-	LapData [22]LapData // Lap data for all cars on track
+	Header               PacketHeader // Header
+	LapData              [22]LapData  // Lap data for all cars on track
+	TimeTrialPBCarIdx    uint8        // Index of personal best car in the time trial (255 if no time invalid)
+	TimeTrialRivalCarIdx uint8        // Index of rival car in the time trial (255 if no time invalid)
 }
 
 func (p *PacketLapData) Self() LapData {

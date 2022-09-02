@@ -3,7 +3,7 @@ package packets
 // This packet details car damage parameters for all the cars in the race.
 
 // Frequency: 2 per second
-// Size: 882 bytes
+// Size: 948 bytes
 // Version: 1
 
 type CarDamageData struct {
@@ -17,6 +17,7 @@ type CarDamageData struct {
 	DiffuserDamage       uint8      // Diffuser damage (percentage)
 	SidepodDamage        uint8      // Sidepod damage (percentage)
 	DrsFault             uint8      // Indicator for DRS fault, 0 = OK, 1 = fault
+	ErsFault             uint8      // Indicator for ERS fault, 0 = OK, 1 = fault
 	GearBoxDamage        uint8      // Gear box damage (percentage)
 	EngineDamage         uint8      // Engine damage (percentage)
 	EngineMGUHWear       uint8      // Engine wear MGU-H (percentage)
@@ -25,6 +26,8 @@ type CarDamageData struct {
 	EngineICEWear        uint8      // Engine wear ICE (percentage)
 	EngineMGUKWear       uint8      // Engine wear MGU-K (percentage)
 	EngineTCWear         uint8      // Engine wear TC (percentage)
+	EngineBlown          uint8      // Engine blown indicator, 0 = OK, 1 = blown
+	EngineSeized         uint8      // Engine seized indicator, 0 = OK, 1 = seized
 }
 
 type PacketCarDamageData struct {

@@ -3,7 +3,7 @@ package packets
 // This packet details car statuses for all the cars in the race. It includes values such as the damage readings on the car.
 
 // Frequency: Rate as specified in menus
-// Size: 1344
+// Size: 1058 bytes
 // Version: 1
 
 type CarStatusData struct {
